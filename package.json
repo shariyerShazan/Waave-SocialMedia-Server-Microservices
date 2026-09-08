@@ -28,6 +28,7 @@
     "user-test": "jest apps/user-service",
     "post-test": "jest apps/post-service",
     "media-test": "jest apps/media-service",
+    "notification-test": "jest apps/notification-service",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
@@ -171,6 +172,7 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
+      "^@app/clients(|/.*)$": "<rootDir>/libs/grpc-clients/src/$1",
       "^@app/grpc-clients(|/.*)$": "<rootDir>/libs/grpc-clients/src/$1",
       "^libs/grpc-clients/src(|/.*)$": "<rootDir>/libs/grpc-clients/src/$1",
       "^@app/common(|/.*)$": "<rootDir>/libs/common/src/$1",
